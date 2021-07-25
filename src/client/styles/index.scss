@@ -1,0 +1,96 @@
+$ds-bg-color: #eee;
+$ds-title-color: #444;
+$ds-primary-500: #880E4F;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+#main {
+  padding: 0;
+  box-sizing: border-box;
+  width: 60%;
+  height: 100%;
+}
+
+#main h1 {
+  color: $ds-primary-500;
+  text-align: center;
+}
+
+.book-list {
+  padding: 0;
+}
+
+.book-list li {
+  display: inline-block;
+  margin: 12px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid $ds-primary-500;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+  cursor: pointer;
+  color: $ds-primary-500;
+}
+
+.add-book-form-container {
+  width: 100%;
+  padding: 10px;
+} 
+
+.add-book-form {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  background-color: #eee;
+  border: 1px solid $ds-primary-500;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+  border-radius: 4px;
+  width: 400px;
+  .field {
+    display: grid;
+    grid-gap: 4px;
+    margin: 6px;
+  }
+  .add-book-btn {
+    width: fit-content;
+    border: 1px solid $ds-primary-500;
+    border-radius: 4px;
+    background-color: $ds-primary-500;
+    color: $ds-bg-color;
+    align-self: flex-end;
+    padding: 0 6px;
+    margin: 6px;
+    cursor: pointer;
+  }
+}
+
+.add-book-form label, .add-book-form select, .add-book-form input {
+  color: $ds-primary-500;
+}
+
+.add-book-form select, .add-book-form input {
+  border-width: 1px;
+  border-radius: 4px;
+}
+
+.book-details-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  padding: 30px;
+  background: $ds-primary-500;
+  box-sizing: border-box;
+  box-shadow: -2px -3px 5px rgba(0,0,0,0.3);
+  color: #fff;
+  overflow: auto;
+}

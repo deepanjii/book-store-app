@@ -1,3 +1,4 @@
+const cors = require("cors");
 const dotnev = require("dotenv");
 const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
@@ -8,6 +9,7 @@ const { dbRootSchema } = require("./schema/dbroot.schema");
 dotnev.config();
 const port = Number(process.env.SERVER_PORT);
 const app = express();
+app.use(cors());
 const { DB_NAME, DB_USER, DB_PASS } = process.env;
 
 const databaseUri = `mongodb+srv://${DB_USER}:${DB_PASS}@gql-book-store-app.yimlp.mongodb.net/${DB_NAME}`;
